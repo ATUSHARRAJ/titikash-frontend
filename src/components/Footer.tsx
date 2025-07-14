@@ -44,30 +44,32 @@ const Footer = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               <div className="bg-[rgba(178,218,175,0.10)] rounded-lg p-3">
                 <p className="text-white text-sm font-semibold font-inter">
-                  <strong>🇺🇸United States</strong><br />
-                  Dallas, Texas<br />
-                  <span className="text-xs text-[#B1ADBC]">+1 469 638 3402</span>
+                  <strong>🇺🇸  United States</strong><br />
                 </p>
               </div>
               <div className="bg-[rgba(178,218,175,0.10)] rounded-lg p-3">
                 <p className="text-white text-sm font-semibold font-inter">
-                  <strong>🇮🇳India</strong><br />
-                  Ahmedabad, Gujarat<br />
-                  <span className="text-xs text-[#B1ADBC]">+91 960 142 1472</span>
+                  <strong>🇮🇳  India</strong><br />
                 </p>
               </div>
               <div className="bg-[rgba(178,218,175,0.10)] rounded-lg p-3">
                 <p className="text-white text-sm font-semibold font-inter">
-                  <strong>🇬🇧United Kingdom</strong><br />
-                  London<br />
-                  <span className="text-xs text-[#B1ADBC]">+44 742 409 8452</span>
+                  <strong>🇬🇧  United Kingdom</strong><br />
                 </p>
               </div>
               <div className="bg-[rgba(178,218,175,0.10)] rounded-lg p-3">
                 <p className="text-white text-sm font-semibold font-inter">
-                  <strong>🇫🇰Australia</strong><br />
-                  Melbourne, VIC<br />
-                  <span className="text-xs text-[#B1ADBC]">+61 3 9581 2659</span>
+                  <strong>🇫🇰  Australia</strong><br />
+                </p>
+              </div>
+              <div className="bg-[rgba(178,218,175,0.10)] rounded-lg p-3">
+                <p className="text-white text-sm font-semibold font-inter">
+                  <strong>🇦🇪  UAE</strong><br />
+                </p>
+              </div>
+              <div className="bg-[rgba(178,218,175,0.10)] rounded-lg p-3">
+                <p className="text-white text-sm font-semibold font-inter">
+                  <strong>🇮🇹  Italy</strong><br />
                 </p>
               </div>
             </div>

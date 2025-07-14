@@ -142,7 +142,7 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
             {services.map((service) => {
               const IconComponent = service.icon;
               return (
@@ -152,15 +152,18 @@ const Services = () => {
                   className="group block"
                 >
                   <div className="bg-card-gradient backdrop-blur-88 border border-glass-border rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-brand-teal/50 hover:-translate-y-2">
-                    <div
-                      className={`w-16 h-16 bg-gradient-to-r ${service.gradient} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
-                    >
-                      <IconComponent className="w-8 h-8 text-white" />
+                    <div className="flex items-start mb-2">
+                      <div
+                        className={`w-16 h-16 bg-gradient-to-r ${service.gradient} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                      >
+                        <IconComponent className="w-8 h-8 text-white" />
+                      </div>
+
+                      <h3 className="text-xl font-bold text-white mb-2 font-inter group-hover:text-brand-teal transition-colors ml-3">
+                        {service.title}
+                      </h3>
                     </div>
 
-                    <h3 className="text-xl font-bold text-white mb-3 font-inter group-hover:text-brand-teal transition-colors">
-                      {service.title}
-                    </h3>
 
                     <p className="text-[#D2D0DD] font-inter leading-relaxed">
                       {service.description}
@@ -205,11 +208,11 @@ const Services = () => {
               Book a Consultation
             </button>
             <Link
-             to="/portfolio"
-             className="border-2 border-white text-white px-8 py-4 rounded-29 font-inter text-lg hover:bg-white hover:text-gray-900 transition-colors text-center"
-             >
-               View Portfolio
-             </Link>
+              to="/portfolio"
+              className="border-2 border-white text-white px-8 py-4 rounded-29 font-inter text-lg hover:bg-white hover:text-gray-900 transition-colors text-center"
+            >
+              View Portfolio
+            </Link>
 
           </div>
         </div>

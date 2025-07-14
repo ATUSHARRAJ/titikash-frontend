@@ -220,12 +220,15 @@ const About = () => {
                 key={index}
                 className="bg-card-gradient backdrop-blur-88 border border-glass-border rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-brand-teal to-brand-green rounded-xl flex items-center justify-center mb-6 text-white">
-                  {value.icon}
+                <div className="flex items-start mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-brand-teal to-brand-green rounded-xl flex items-center justify-center mb-6 text-white">
+                    {value.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4 font-inter ml-3">
+                    {value.title}
+                  </h3>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4 font-inter">
-                  {value.title}
-                </h3>
+
                 <p className="text-[#D2D0DD] font-inter leading-relaxed">
                   {value.description}
                 </p>

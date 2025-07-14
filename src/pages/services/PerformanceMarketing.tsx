@@ -75,22 +75,6 @@ const PerformanceMarketing = () => {
 
       <Navigation />
 
-      {/* Breadcrumb */}
-      <div className="relative z-10 py-4 px-4">
-        <div className="max-w-6xl mx-auto flex items-center gap-2 text-sm">
-          <Link
-            to="/services"
-            className="text-brand-teal hover:underline font-inter"
-          >
-            Services
-          </Link>
-          <span className="text-white/40">/</span>
-          <span className="text-[#D2D0DD] font-inter">
-            Performance Marketing
-          </span>
-        </div>
-      </div>
-
       {/* Hero Section */}
       <section className="bg-hero-gradient py-16 px-4">
         <div className="max-w-6xl mx-auto">
@@ -175,7 +159,7 @@ const PerformanceMarketing = () => {
                     <button className="bg-brand-teal text-white px-6 py-3 rounded-lg font-inter font-medium hover:bg-brand-teal/90 transition-colors">
                       Learn More
                     </button>
-                    <button className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-inter font-medium hover:border-brand-teal hover:text-brand-teal transition-colors">
+                    <button className="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-inter font-medium hover:border-brand-teal hover:text-brand-teal transition-colors">
                       View Examples
                     </button>
                   </div>

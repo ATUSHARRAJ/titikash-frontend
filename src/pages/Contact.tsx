@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
+import "flag-icons/css/flag-icons.min.css";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -204,13 +205,13 @@ const Contact = () => {
                         Email Address
                       </h4>
                       <a
-                        href="mailto:info@visualizedigital.com"
+                        href="mailto:info@visualizedigital.in"
                         className="text-brand-teal hover:text-brand-green transition-colors font-inter block"
                       >
-                        info@visualizedigital.com
+                        info@visualizedigital.in
                       </a>
                       <a
-                        href="mailto:support@visualizedigital.com"
+                        href="mailto:support@visualizedigital.in"
                         className="text-brand-teal hover:text-brand-green transition-colors font-inter block"
                       >
                         support@visualizedigital.in
@@ -228,12 +229,6 @@ const Contact = () => {
                       </h4>
                       <a
                         href="tel:+15551234567"
-                        className="text-brand-teal hover:text-brand-green transition-colors font-inter block"
-                      >
-                        +91 72910 31315
-                      </a>
-                      <a
-                        href="tel:+15559876543"
                         className="text-brand-teal hover:text-brand-green transition-colors font-inter block"
                       >
                         +91 72910 31315
@@ -314,29 +309,32 @@ const Contact = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-card-gradient backdrop-blur-88 border border-glass-border rounded-2xl p-6 shadow-lg">
-              <div className="w-12 h-12 bg-gradient-to-r from-brand-teal to-brand-green rounded-lg flex items-center justify-center mb-4">
-                <MapPin className="w-6 h-6 text-white" />
+              <div className="flex items-center mb-3 ">
+                <span className="fi fi-us"></span>
+
+                <h3 className="text-xl font-bold text-white mb-2 font-inter ml-3">
+                  New York, USA
+                </h3>
               </div>
-              <h3 className="text-xl font-bold text-white mb-2 font-inter">
-                 New York, USA
-              </h3>
+
               <p className="text-[#D2D0DD] font-inter">
-                Visualize Digital Private Limited
+                Visualize Digital
                 <br />
                 5th Floor, 123 Madison Avenue,
                 <br />
                 use-sales@visualizedigital.in
               </p>
             </div>
-             <div className="bg-card-gradient backdrop-blur-88 border border-glass-border rounded-2xl p-6 shadow-lg">
-              <div className="w-12 h-12 bg-gradient-to-r from-brand-teal to-brand-green rounded-lg flex items-center justify-center mb-4">
-                <MapPin className="w-6 h-6 text-white" />
+            <div className="bg-card-gradient backdrop-blur-88 border border-glass-border rounded-2xl p-6 shadow-lg">
+              <div className="flex items-center mb-3 ">
+                <span className="fi fi-au"></span>
+                <h3 className="text-xl font-bold text-white mb-2 font-inter ml-3">
+                  Sydney, Australia
+                </h3>
               </div>
-              <h3 className="text-xl font-bold text-white mb-2 font-inter">
-                Sydney, Australia
-              </h3>
+
               <p className="text-[#D2D0DD] font-inter">
-                Visualize Digital Private Limited
+                Visualize Digital
                 <br />
                 Level 8, 350 George Street,
                 <br />
@@ -344,14 +342,15 @@ const Contact = () => {
               </p>
             </div>
             <div className="bg-card-gradient backdrop-blur-88 border border-glass-border rounded-2xl p-6 shadow-lg">
-              <div className="w-12 h-12 bg-gradient-to-r from-brand-teal to-brand-green rounded-lg flex items-center justify-center mb-4">
-                <MapPin className="w-6 h-6 text-white" />
+              <div className="flex items-center mb-3 ">
+                <span className="fi fi-ae"></span>
+                <h3 className="text-xl font-bold text-white mb-2 font-inter ml-3">
+                  Dubai, UAE
+                </h3>
               </div>
-              <h3 className="text-xl font-bold text-white mb-2 font-inter">
-                Dubai, UAE
-              </h3>
+
               <p className="text-[#D2D0DD] font-inter">
-                Visualize Digital Private Limited
+                Visualize Digital
                 <br />
                 Office No. 205, DAFZA Business Center,
                 <br />
@@ -361,14 +360,15 @@ const Contact = () => {
               </p>
             </div>
             <div className="bg-card-gradient backdrop-blur-88 border border-glass-border rounded-2xl p-6 shadow-lg">
-              <div className="w-12 h-12 bg-gradient-to-r from-brand-teal to-brand-green rounded-lg flex items-center justify-center mb-4">
-                <MapPin className="w-6 h-6 text-white" />
+              <div className="flex items-center mb-3 ">
+                <span className="fi fi-it"></span>
+                <h3 className="text-xl font-bold text-white mb-2 font-inter ml-3">
+                  Milan, Italy
+                </h3>
               </div>
-              <h3 className="text-xl font-bold text-white mb-2 font-inter">
-                Milan, Italy
-              </h3>
+
               <p className="text-[#D2D0DD] font-inter">
-                Visualize Digital Private Limited
+                Visualize Digital
                 <br />
                 Via Monte Napoleone 12,
                 <br />
@@ -376,14 +376,15 @@ const Contact = () => {
               </p>
             </div>
             <div className="bg-card-gradient backdrop-blur-88 border border-glass-border rounded-2xl p-6 shadow-lg">
-              <div className="w-12 h-12 bg-gradient-to-r from-brand-teal to-brand-green rounded-lg flex items-center justify-center mb-4">
-                <MapPin className="w-6 h-6 text-white" />
+              <div className="flex items-center mb-3 ">
+                <span className="fi fi-gb"></span>
+                <h3 className="text-xl font-bold text-white mb-2 font-inter ml-3">
+                  London , United Kingdom
+                </h3>
               </div>
-              <h3 className="text-xl font-bold text-white mb-2 font-inter">
-               London , United Kingdom
-              </h3>
+
               <p className="text-[#D2D0DD] font-inter">
-                Visualize Digital Private Limited
+                Visualize Digital
                 <br />
                 Suite 23, 2nd Floor, Berkeley Square House
                 <br />
@@ -391,12 +392,13 @@ const Contact = () => {
               </p>
             </div>
             <div className="bg-card-gradient backdrop-blur-88 border border-glass-border rounded-2xl p-6 shadow-lg">
-              <div className="w-12 h-12 bg-gradient-to-r from-brand-teal to-brand-green rounded-lg flex items-center justify-center mb-4">
-                <MapPin className="w-6 h-6 text-white" />
+              <div className="flex items-center mb-3 ">
+                <span className="fi fi-in"></span>
+                <h3 className="text-xl font-bold text-white mb-2 font-inter ml-3">
+                  Gurgaon (Gurugram)
+                </h3>
               </div>
-              <h3 className="text-xl font-bold text-white mb-2 font-inter">
-                Gurgaon (Gurugram)
-              </h3>
+
               <p className="text-[#D2D0DD] font-inter">
                 Unitech Cyber Park
                 <br />

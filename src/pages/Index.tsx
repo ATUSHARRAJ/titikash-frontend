@@ -24,7 +24,10 @@ const Index = () => {
       <section className="relative z-10 text-center px-4 py-16 max-w-5xl mx-auto">
         <div className="space-y-6">
           <h1 className="text-6xl lg:text-7xl font-bold font-inter leading-tight bg-hero-text-gradient bg-clip-text text-transparent">
-            Innovative Software That Powers Your Vision
+            Innovative Software
+          </h1>
+          <h1 className="text-6xl lg:text-7xl font-bold font-inter leading-tight bg-hero-text-gradient bg-clip-text text-transparent">
+            That Powers Your Vision
           </h1>
           <p className="text-xl text-[#D2D0DD] max-w-3xl mx-auto font-inter">
             Visual Design delivers scalable solutions for modern businesses.
@@ -248,7 +251,7 @@ const Index = () => {
                 className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-20 rounded-xl blur-xl`}
               />
               <div className="relative bg-card-gradient backdrop-blur-88 border-t-8 border-[#46C951] rounded-xl p-8 h-full">
-                <div className="flex items-start justify-between mb-4">
+                <div className="flex items-start mb-4">
                   <div className="w-8 h-8 bg-[#FF8983] rounded">
                     <svg
                       className="w-8 h-8"
@@ -258,25 +261,11 @@ const Index = () => {
                       <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
                     </svg>
                   </div>
-                  <button className="w-6 h-6 bg-[rgba(50,45,46,0.90)] rounded flex items-center justify-center">
-                    <svg
-                      className="w-4 h-4 text-[#EAEAEA]"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M6 18L18 6M6 6l12 12"
-                      />
-                    </svg>
-                  </button>
+                  <h3 className="text-xl font-bold text-[#CED0D0] mb-2 font-roboto ml-3">
+                    {service.title}
+                  </h3>
                 </div>
-                <h3 className="text-xl font-bold text-[#CED0D0] mb-2 font-roboto">
-                  {service.title}
-                </h3>
+
                 <p className="text-[#CED0D0] text-sm mb-6 font-roboto">
                   {service.description}
                 </p>
@@ -492,7 +481,7 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-            <div className="bg-[#1D1F32] border-2 border-[#36D7AC] rounded-xl p-8 shadow-card-shadow">
+            <div className="bg-[rgba(217,217,217,0.2)] border-2 border-[#36D7AC] rounded-xl p-8 shadow-card-shadow">
               <p className="text-white text-lg mb-6 font-inter">
                 Over 10 years of engagement with TatvaSoft for custom software
                 development, our business has seen profitable results with their
@@ -508,7 +497,7 @@ const Index = () => {
                 Technical Specialist
               </p>
             </div>
-            <div className="bg-[#1D1F32] border-2 border-[#36D7AC] rounded-xl p-8">
+            <div className="bg-[rgba(217,217,217,0.2)] border-2 border-[#36D7AC] rounded-xl p-8">
               <p className="text-white text-lg mb-6 font-inter">
                 Attributing the project's success to the quality and speed of
                 the deliverables TatvaSoft has provided, internal stakeholders

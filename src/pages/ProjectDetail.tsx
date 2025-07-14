@@ -328,7 +328,7 @@ const ProjectDetail = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative z-10 py-20 px-4">
+      <section className="relative z-10 pt-20 px-4">
         <div className="max-w-6xl mx-auto">
           <Link
             to="/portfolio"
@@ -348,11 +348,10 @@ const ProjectDetail = () => {
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star
                       key={i}
-                      className={`w-4 h-4 ${
-                        i < project.rating
-                          ? "text-yellow-400 fill-current"
-                          : "text-gray-400"
-                      }`}
+                      className={`w-4 h-4 ${i < project.rating
+                        ? "text-yellow-400 fill-current"
+                        : "text-gray-400"
+                        }`}
                     />
                   ))}
                 </div>
@@ -420,6 +419,46 @@ const ProjectDetail = () => {
       {/* Project Details */}
       <section className="relative z-10 py-16 px-4">
         <div className="max-w-6xl mx-auto">
+          {/* Key Features */}
+          <div className="mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12 font-inter text-center">
+              Key Features
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {project.keyFeatures.map((feature, index) => (
+                <div
+                  key={index}
+                  className="bg-glass-white backdrop-blur-sm border border-glass-border rounded-[20px] p-6 hover:scale-105 transition-all duration-300 group"
+                >
+                  <div className="w-12 h-12 bg-brand-teal/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-brand-teal/30 transition-colors">
+                    <CheckCircle className="w-6 h-6 text-brand-teal" />
+                  </div>
+                  <p className="text-white font-inter">{feature}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Description */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6 font-inter">
+                Project Overview
+              </h2>
+              <p className="text-lg text-[#D2D0DD] font-inter leading-relaxed">
+                {project.description}
+              </p>
+            </div>
+            <div>
+              <img
+                src={project.heroImage}
+                alt="Project overview"
+                className="w-full h-64 object-cover rounded-[20px] shadow-xl"
+              />
+            </div>
+          </div>
+
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {/* Project Info */}
             <div className="bg-glass-white backdrop-blur-sm border border-glass-border rounded-[20px] p-6">
@@ -475,45 +514,6 @@ const ProjectDetail = () => {
                   </span>
                 ))}
               </div>
-            </div>
-          </div>
-
-          {/* Description */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-            <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6 font-inter">
-                Project Overview
-              </h2>
-              <p className="text-lg text-[#D2D0DD] font-inter leading-relaxed">
-                {project.description}
-              </p>
-            </div>
-            <div>
-              <img
-                src={project.heroImage}
-                alt="Project overview"
-                className="w-full h-64 object-cover rounded-[20px] shadow-xl"
-              />
-            </div>
-          </div>
-
-          {/* Key Features */}
-          <div className="mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12 font-inter text-center">
-              Key Features
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {project.keyFeatures.map((feature, index) => (
-                <div
-                  key={index}
-                  className="bg-glass-white backdrop-blur-sm border border-glass-border rounded-[20px] p-6 hover:scale-105 transition-all duration-300 group"
-                >
-                  <div className="w-12 h-12 bg-brand-teal/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-brand-teal/30 transition-colors">
-                    <CheckCircle className="w-6 h-6 text-brand-teal" />
-                  </div>
-                  <p className="text-white font-inter">{feature}</p>
-                </div>
-              ))}
             </div>
           </div>
 

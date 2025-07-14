@@ -118,7 +118,7 @@ const Technologies = () => {
       {/* Technologies Grid */}
       <section className="relative z-10 py-12 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
             {technologies.map((tech, index) => {
               const IconComponent = tech.icon;
               return (
@@ -130,17 +130,20 @@ const Technologies = () => {
                     animation: "fadeInUp 0.6s ease-out forwards",
                   }}
                 >
-                  {/* Icon with gradient background */}
-                  <div
-                    className={`w-16 h-16 rounded-full bg-gradient-to-br ${tech.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
-                  >
-                    <IconComponent className="w-8 h-8 text-white" />
+                  <div className="flex items-start mb-3 ">
+                    {/* Icon with gradient background */}
+                    <div
+                      className={`w-16 h-16 rounded-full bg-gradient-to-br ${tech.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
+                    >
+                      <IconComponent className="w-8 h-8 text-white" />
+                    </div>
+
+                    {/* Technology Name */}
+                    <h3 className="text-lg font-bold text-white mb-2 font-inter group-hover:text-brand-teal transition-colors duration-300 ml-2">
+                      {tech.name}
+                    </h3>
                   </div>
 
-                  {/* Technology Name */}
-                  <h3 className="text-xl font-bold text-white mb-2 font-inter group-hover:text-brand-teal transition-colors duration-300">
-                    {tech.name}
-                  </h3>
 
                   {/* Description */}
                   <p className="text-[#D2D0DD] text-sm font-inter leading-relaxed">
