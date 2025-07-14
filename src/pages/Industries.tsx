@@ -168,16 +168,16 @@ const Industries = () => {
                   <div
                     className={`absolute inset-0 bg-gradient-to-br ${industry.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-[24px]`}
                   />
-                  <div className="flex items-start mb-3">
+                  <div className="flex items-center mb-3">
                     {/* Icon with gradient background */}
                     <div
-                      className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${industry.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 relative z-10`}
+                      className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${industry.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 relative z-10`}
                     >
-                      <IconComponent className="w-10 h-10 text-white" />
+                      <IconComponent className="w-6 h-6 text-white" />
                     </div>
 
                     {/* Industry Name */}
-                    <h3 className="text-2xl font-bold text-white mb-3 font-inter group-hover:text-brand-teal transition-colors duration-300 relative z-10 ml-3">
+                    <h3 className="text-2xl font-bold text-white mb-5 font-inter group-hover:text-brand-teal transition-colors duration-300 relative z-10 ml-3">
                       {industry.name}
                     </h3>
                   </div>

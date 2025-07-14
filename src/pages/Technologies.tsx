@@ -130,16 +130,16 @@ const Technologies = () => {
                     animation: "fadeInUp 0.6s ease-out forwards",
                   }}
                 >
-                  <div className="flex items-start mb-3 ">
+                  <div className="flex items-center mb-3 ">
                     {/* Icon with gradient background */}
                     <div
-                      className={`w-16 h-16 rounded-full bg-gradient-to-br ${tech.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
+                      className={`w-12 h-12 rounded-full bg-gradient-to-br ${tech.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
                     >
-                      <IconComponent className="w-8 h-8 text-white" />
+                      <IconComponent className="w-6 h-6 text-white" />
                     </div>
 
                     {/* Technology Name */}
-                    <h3 className="text-lg font-bold text-white mb-2 font-inter group-hover:text-brand-teal transition-colors duration-300 ml-2">
+                    <h3 className="text-lg font-bold text-white mb-5 font-inter group-hover:text-brand-teal transition-colors duration-300 ml-2">
                       {tech.name}
                     </h3>
                   </div>

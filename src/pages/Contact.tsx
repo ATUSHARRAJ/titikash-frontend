@@ -310,9 +310,9 @@ const Contact = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-card-gradient backdrop-blur-88 border border-glass-border rounded-2xl p-6 shadow-lg">
               <div className="flex items-center mb-3 ">
-                <span className="fi fi-us"></span>
+                <span className="fi fi-us w-12 h-12"></span>
 
-                <h3 className="text-xl font-bold text-white mb-2 font-inter ml-3">
+                <h3 className="text-xl font-bold text-white mb-1 font-inter ml-3">
                   New York, USA
                 </h3>
               </div>
@@ -327,7 +327,7 @@ const Contact = () => {
             </div>
             <div className="bg-card-gradient backdrop-blur-88 border border-glass-border rounded-2xl p-6 shadow-lg">
               <div className="flex items-center mb-3 ">
-                <span className="fi fi-au"></span>
+                <span className="fi fi-au w-12 h-12"></span>
                 <h3 className="text-xl font-bold text-white mb-2 font-inter ml-3">
                   Sydney, Australia
                 </h3>
@@ -343,7 +343,7 @@ const Contact = () => {
             </div>
             <div className="bg-card-gradient backdrop-blur-88 border border-glass-border rounded-2xl p-6 shadow-lg">
               <div className="flex items-center mb-3 ">
-                <span className="fi fi-ae"></span>
+                <span className="fi fi-ae w-12 h-12"></span>
                 <h3 className="text-xl font-bold text-white mb-2 font-inter ml-3">
                   Dubai, UAE
                 </h3>
@@ -361,7 +361,7 @@ const Contact = () => {
             </div>
             <div className="bg-card-gradient backdrop-blur-88 border border-glass-border rounded-2xl p-6 shadow-lg">
               <div className="flex items-center mb-3 ">
-                <span className="fi fi-it"></span>
+                <span className="fi fi-it w-12 h-12"></span>
                 <h3 className="text-xl font-bold text-white mb-2 font-inter ml-3">
                   Milan, Italy
                 </h3>
@@ -377,7 +377,7 @@ const Contact = () => {
             </div>
             <div className="bg-card-gradient backdrop-blur-88 border border-glass-border rounded-2xl p-6 shadow-lg">
               <div className="flex items-center mb-3 ">
-                <span className="fi fi-gb"></span>
+                <span className="fi fi-gb w-12 h-12"></span>
                 <h3 className="text-xl font-bold text-white mb-2 font-inter ml-3">
                   London , United Kingdom
                 </h3>
@@ -393,7 +393,7 @@ const Contact = () => {
             </div>
             <div className="bg-card-gradient backdrop-blur-88 border border-glass-border rounded-2xl p-6 shadow-lg">
               <div className="flex items-center mb-3 ">
-                <span className="fi fi-in"></span>
+                <span className="fi fi-in w-12 h-12"></span>
                 <h3 className="text-xl font-bold text-white mb-2 font-inter ml-3">
                   Gurgaon (Gurugram)
                 </h3>

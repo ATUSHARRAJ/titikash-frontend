@@ -55,7 +55,7 @@ const Index = () => {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="text-center bg-glass-white backdrop-blur-sm rounded-xl p-6 border border-glass-border">
             <div className="text-5xl font-bold text-stat-green font-inter">
-              1800+
+              500+
             </div>
             <div className="text-2xl font-bold text-white mt-2 font-inter">
               Completed Project
@@ -63,7 +63,7 @@ const Index = () => {
           </div>
           <div className="text-center bg-glass-white backdrop-blur-sm rounded-xl p-6 border border-glass-border">
             <div className="text-5xl font-bold text-stat-green font-inter">
-              21+
+              12+
             </div>
             <div className="text-2xl font-bold text-white mt-2 font-inter">
               Year Of Experience
@@ -71,7 +71,7 @@ const Index = () => {
           </div>
           <div className="text-center bg-glass-white backdrop-blur-sm rounded-xl p-6 border border-glass-border">
             <div className="text-5xl font-bold text-stat-green font-inter">
-              810+
+              300+
             </div>
             <div className="text-2xl font-bold text-white mt-2 font-inter">
               Global Customers
@@ -79,7 +79,7 @@ const Index = () => {
           </div>
           <div className="text-center bg-glass-white backdrop-blur-sm rounded-xl p-6 border border-glass-border">
             <div className="text-5xl font-bold text-stat-green font-inter">
-              36
+              10+
             </div>
             <div className="text-2xl font-bold text-white mt-2 font-inter">
               Country Clients
@@ -565,8 +565,8 @@ const Index = () => {
               </h2>
               <p className="text-xl text-white font-inter font-bold">
                 Send us your requirements on{" "}
-                <span className="underline">info@tatvasoft.com</span> or call{" "}
-                <span className="underline">+1 469 638 3402</span>
+                <span className="underline">info@visualizedigital.in</span> or call{" "}
+                <span className="underline">+91  7291031315</span>
               </p>
             </div>
             <button className="bg-gradient-to-r from-[#70CA45] to-[#5454D4] px-16 py-3 rounded-29 text-white font-inter text-lg shadow-green-glow flex items-center gap-2 hover:scale-105 transition-transform">

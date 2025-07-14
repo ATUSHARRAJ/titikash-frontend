@@ -152,14 +152,14 @@ const Services = () => {
                   className="group block"
                 >
                   <div className="bg-card-gradient backdrop-blur-88 border border-glass-border rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-brand-teal/50 hover:-translate-y-2">
-                    <div className="flex items-start mb-2">
+                    <div className="flex items-center mb-1">
                       <div
-                        className={`w-16 h-16 bg-gradient-to-r ${service.gradient} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                        className={`w-12 h-12 bg-gradient-to-r ${service.gradient} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
                       >
-                        <IconComponent className="w-8 h-8 text-white" />
+                        <IconComponent className="w-6 h-6 text-white" />
                       </div>
 
-                      <h3 className="text-xl font-bold text-white mb-2 font-inter group-hover:text-brand-teal transition-colors ml-3">
+                      <h3 className="text-xl font-bold text-white mb-5 font-inter group-hover:text-brand-teal transition-colors ml-3">
                         {service.title}
                       </h3>
                     </div>

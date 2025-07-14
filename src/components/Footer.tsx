@@ -44,32 +44,32 @@ const Footer = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               <div className="bg-[rgba(178,218,175,0.10)] rounded-lg p-3">
                 <p className="text-white text-sm font-semibold font-inter">
-                  <strong>🇺🇸  United States</strong><br />
+                  <strong>🇺🇸  &nbsp; &nbsp; </strong><strong>United States</strong><br />
                 </p>
               </div>
               <div className="bg-[rgba(178,218,175,0.10)] rounded-lg p-3">
                 <p className="text-white text-sm font-semibold font-inter">
-                  <strong>🇮🇳  India</strong><br />
+                  <strong>🇮🇳 &nbsp; &nbsp;  India</strong><br />
                 </p>
               </div>
               <div className="bg-[rgba(178,218,175,0.10)] rounded-lg p-3">
                 <p className="text-white text-sm font-semibold font-inter">
-                  <strong>🇬🇧  United Kingdom</strong><br />
+                  <strong>🇬🇧 &nbsp; &nbsp;  United Kingdom</strong><br />
                 </p>
               </div>
               <div className="bg-[rgba(178,218,175,0.10)] rounded-lg p-3">
                 <p className="text-white text-sm font-semibold font-inter">
-                  <strong>🇫🇰  Australia</strong><br />
+                  <strong>🇫🇰 &nbsp; &nbsp;  Australia</strong><br />
                 </p>
               </div>
               <div className="bg-[rgba(178,218,175,0.10)] rounded-lg p-3">
                 <p className="text-white text-sm font-semibold font-inter">
-                  <strong>🇦🇪  UAE</strong><br />
+                  <strong>🇦🇪 &nbsp; &nbsp;  UAE</strong><br />
                 </p>
               </div>
               <div className="bg-[rgba(178,218,175,0.10)] rounded-lg p-3">
                 <p className="text-white text-sm font-semibold font-inter">
-                  <strong>🇮🇹  Italy</strong><br />
+                  <strong>🇮🇹 &nbsp; &nbsp; Italy</strong><br />
                 </p>
               </div>
             </div>

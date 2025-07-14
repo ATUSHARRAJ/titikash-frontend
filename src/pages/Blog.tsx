@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import {
@@ -243,10 +244,13 @@ const Blog = () => {
                                 <User className="w-4 h-4" />
                                 {featuredPost?.author}
                               </div>
-                              <button className="flex items-center gap-2 text-brand-teal hover:text-white transition-colors group-hover:gap-3 font-semibold">
+                              <Link
+                                to={`/blog/${featuredPost?.id}`}
+                                className="flex items-center gap-2 text-brand-teal hover:text-white transition-colors group-hover:gap-3 font-semibold"
+                              >
                                 Read More
                                 <ArrowRight className="w-4 h-4" />
-                              </button>
+                              </Link>
                             </div>
                           </div>
                         </div>
@@ -303,10 +307,13 @@ const Blog = () => {
                             <User className="w-3 h-3" />
                             {post.author}
                           </div>
-                          <button className="flex items-center gap-1 text-brand-teal hover:text-white transition-colors text-sm font-semibold opacity-0 group-hover:opacity-100">
+                          <Link
+                            to={`/blog/${post.id}`}
+                            className="flex items-center gap-1 text-brand-teal hover:text-white transition-colors text-sm font-semibold opacity-0 group-hover:opacity-100"
+                          >
                             Read More
                             <ArrowRight className="w-3 h-3" />
-                          </button>
+                          </Link>
                         </div>
                       </div>
                     </article>
@@ -325,9 +332,10 @@ const Blog = () => {
                   </h3>
                   <div className="space-y-4">
                     {recentPosts.map((post) => (
-                      <article
+                      <Link
                         key={post.id}
-                        className="group cursor-pointer hover:bg-white/5 rounded-lg p-3 transition-colors"
+                        to={`/blog/${post.id}`}
+                        className="block group cursor-pointer hover:bg-white/5 rounded-lg p-3 transition-colors"
                       >
                         <h4 className="text-sm font-semibold text-white group-hover:text-brand-teal transition-colors line-clamp-2 mb-2">
                           {post.title}
@@ -336,7 +344,7 @@ const Blog = () => {
                           <Calendar className="w-3 h-3" />
                           {post.date}
                         </div>
-                      </article>
+                      </Link>
                     ))}
                   </div>
                 </div>

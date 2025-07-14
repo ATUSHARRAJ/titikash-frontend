@@ -13,6 +13,7 @@ import Technologies from "./pages/Technologies";
 import Industries from "./pages/Industries";
 import Portfolio from "./pages/Portfolio";
 import Blog from "./pages/Blog";
+import BlogDetail from "./pages/BlogDetail";
 import ProjectDetail from "./pages/ProjectDetail";
 import PerformanceMarketing from "./pages/services/PerformanceMarketing";
 import SEOContent from "./pages/services/SEOContent";
@@ -41,6 +42,7 @@ const App = () => (
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/portfolio/:id" element={<ProjectDetail />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route
