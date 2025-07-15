@@ -58,37 +58,48 @@ const About = () => {
     },
   ];
 
-  const team = [
+  const teamLead = [
     {
-      name: "Sarah Johnson",
-      role: "CEO & Co-Founder",
+      name: "Varun Bhat",
+      role: "UI UX Designer",
       image:
-        "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400",
-      description: "15+ years in digital strategy and business development",
-    },
-    {
-      name: "Michael Chen",
-      role: "CTO & Co-Founder",
-      image:
-        "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "Varun Bhat.jpg",
       description: "Expert in scalable architecture and emerging technologies",
     },
     {
-      name: "Emily Rodriguez",
-      role: "Head of Design",
+      name: "Seema Acharya",
+      role: "Business Analyst",
       image:
-        "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "Seema Acharya.jpg",
       description: "Award-winning UX/UI designer with 10+ years experience",
     },
     {
-      name: "David Park",
-      role: "Lead Developer",
+      name: "Pooja Sharma",
+      role: "Java Developer",
       image:
-        "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "Pooja Sharma.jpg",
+      description: "Award-winning UX/UI designer with 10+ years experience",
+    },
+  ];
+
+  const teamMembers = [
+    {
+      name: "Bhagabata Brahma",
+      role: "Senior Full Stack Developer",
+      image:
+        "Bhagabata Brahma.jpg",
       description:
         "Full-stack developer specializing in modern web technologies",
     },
-  ];
+    {
+      name: "Bikram",
+      role: "3D Animation",
+      image:
+        "Bikram.jpg",
+      description:
+        "Full-stack developer specializing in modern web technologies",
+    },
+  ]
 
   return (
     <div className="min-h-screen bg-hero-gradient font-inter text-white overflow-hidden relative">
@@ -238,14 +249,14 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="relative z-10 py-20 px-4">
+      {/* Team Lead Section */}
+      <section className="relative z-10 pt-20 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-white mb-12 font-inter text-center">
             Meet Our Leadership Team
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {teamLead.map((member, index) => (
               <div
                 key={index}
                 className="bg-card-gradient backdrop-blur-88 border border-glass-border rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow text-center"
@@ -260,12 +271,46 @@ const About = () => {
                 <h3 className="text-xl font-bold text-white mb-2 font-inter">
                   {member.name}
                 </h3>
-                <p className="text-brand-teal font-semibold mb-3 font-inter">
+                <p className="text-brand-teal font-semibold mb-3 font-inter text-md">
                   {member.role}
                 </p>
-                <p className="text-[#D2D0DD] font-inter text-sm">
+                {/* <p className="text-[#D2D0DD] font-inter text-sm">
                   {member.description}
+                </p> */}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Team Members Section */}
+      <section className="relative z-10 py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-white mb-12 font-inter text-center">
+            Meet Our Team Members
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {teamMembers.map((member, index) => (
+              <div
+                key={index}
+                className="bg-card-gradient backdrop-blur-88 border border-glass-border rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow text-center"
+              >
+                <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-brand-teal">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 font-inter">
+                  {member.name}
+                </h3>
+                <p className="text-brand-teal font-semibold mb-3 font-inter text-md">
+                  {member.role}
                 </p>
+                {/* <p className="text-[#D2D0DD] font-inter text-sm">
+                  {member.description}
+                </p> */}
               </div>
             ))}
           </div>
