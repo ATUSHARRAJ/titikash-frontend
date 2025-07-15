@@ -177,7 +177,7 @@ const Industries = () => {
                     </div>
 
                     {/* Industry Name */}
-                    <h3 className="text-2xl font-bold text-white mb-5 font-inter group-hover:text-brand-teal transition-colors duration-300 relative z-10 ml-3">
+                    <h3 className="text-xl font-bold text-white mb-5 font-inter group-hover:text-brand-teal transition-colors duration-300 relative z-10 ml-3">
                       {industry.name}
                     </h3>
                   </div>
