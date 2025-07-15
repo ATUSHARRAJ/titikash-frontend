@@ -42,34 +42,40 @@ const Footer = () => {
               Global Offices
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-              <div className="bg-[rgba(178,218,175,0.10)] rounded-lg p-3">
+              <div className="bg-[rgba(178,218,175,0.10)] rounded-lg p-3 flex items-center">
+                <span className="text-2xl">🇺🇸 </span>
                 <p className="text-white text-sm font-semibold font-inter">
-                  <strong>🇺🇸  &nbsp; &nbsp; </strong><strong>United States</strong><br />
+                  <strong> &nbsp; &nbsp; </strong><strong>United States</strong><br />
                 </p>
               </div>
-              <div className="bg-[rgba(178,218,175,0.10)] rounded-lg p-3">
+              <div className="bg-[rgba(178,218,175,0.10)] rounded-lg p-3 flex items-center">
+                <span className="text-2xl">🇮🇳 </span>
                 <p className="text-white text-sm font-semibold font-inter">
-                  <strong>🇮🇳 &nbsp; &nbsp;  India</strong><br />
+                  <strong> &nbsp; &nbsp;  India</strong><br />
                 </p>
               </div>
-              <div className="bg-[rgba(178,218,175,0.10)] rounded-lg p-3">
+              <div className="bg-[rgba(178,218,175,0.10)] rounded-lg p-3 flex items-center">
+                <span className="text-2xl">🇬🇧 </span>
                 <p className="text-white text-sm font-semibold font-inter">
-                  <strong>🇬🇧 &nbsp; &nbsp;  United Kingdom</strong><br />
+                  <strong>&nbsp; &nbsp;  United Kingdom</strong><br />
                 </p>
               </div>
-              <div className="bg-[rgba(178,218,175,0.10)] rounded-lg p-3">
+              <div className="bg-[rgba(178,218,175,0.10)] rounded-lg p-3 flex items-center">
+                <span className="text-2xl">🇫🇰 </span>
                 <p className="text-white text-sm font-semibold font-inter">
-                  <strong>🇫🇰 &nbsp; &nbsp;  Australia</strong><br />
+                  <strong>&nbsp; &nbsp;  Australia</strong><br />
                 </p>
               </div>
-              <div className="bg-[rgba(178,218,175,0.10)] rounded-lg p-3">
+              <div className="bg-[rgba(178,218,175,0.10)] rounded-lg p-3 flex items-center">
+                <span className="text-2xl">🇦🇪 </span>
                 <p className="text-white text-sm font-semibold font-inter">
-                  <strong>🇦🇪 &nbsp; &nbsp;  UAE</strong><br />
+                  <strong>&nbsp; &nbsp;  UAE</strong><br />
                 </p>
               </div>
-              <div className="bg-[rgba(178,218,175,0.10)] rounded-lg p-3">
+              <div className="bg-[rgba(178,218,175,0.10)] rounded-lg p-3 flex items-center">
+                <span className="text-2xl">🇮🇹 </span>
                 <p className="text-white text-sm font-semibold font-inter">
-                  <strong>🇮🇹 &nbsp; &nbsp; Italy</strong><br />
+                  <strong>&nbsp; &nbsp; Italy</strong><br />
                 </p>
               </div>
             </div>
