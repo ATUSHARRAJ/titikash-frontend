@@ -60,6 +60,13 @@ const About = () => {
 
   const teamLead = [
     {
+      name: "Pankhuri Kakkar",
+      role: "HR Manager",
+      image:
+        "Pankhuri Kakkar.jpg",
+      description: "Expert in scalable architecture and emerging technologies",
+    },
+    {
       name: "Varun Bhat",
       role: "UI UX Designer",
       image:
