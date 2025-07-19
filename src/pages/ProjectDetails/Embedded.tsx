@@ -41,6 +41,7 @@ const ProjectDetail = () => {
   const [initialProject, setInitialProject] = useState<Project | null>(null);
   const [project, setProject] = useState<Project | null>(null);
   const [editMode, setEditMode] = useState(false);
+  const [projectId, setProjectId] = useState<string | null>(null);
 
   // API Hook
   const {
@@ -54,10 +55,14 @@ const ProjectDetail = () => {
 
   // Get project ID from URL params
   const { id } = useParams();
-  const projectId = id as string;
-
+  useEffect(() => {
+    if (id) {
+      setProjectId(String(id)); // ✅ safely convert to string
+    }
+  }, [projectId , id]);
   // Fetch project details on mount
   useEffect(() => {
+    // Fetch project details when projectId changes
     const fetchProjects = async () => {
       try {
         await fetchProjectDetails(projectId);
@@ -66,7 +71,12 @@ const ProjectDetail = () => {
       }
     };
     fetchProjects();
-  }, []);
+  }, [projectId]);
+
+  useEffect(() => {
+    // Scroll to top when projectId changes
+    window.scrollTo(0, 0);
+  }, [projectId]);
 
   // Set project data when API data changes
   useEffect(() => {

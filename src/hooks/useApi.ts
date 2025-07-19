@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 
-const baseUrl1 = 'https://visualize-digital-server-production.up.railway.app/api/';
+const baseUrl1 = 'http://localhost:5000/api/';
 
 export const useApi = <T>(baseUrl: string) => {
   const fullUrl = baseUrl1 + baseUrl;

@@ -1,8 +1,8 @@
 import { useParams, Link } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import {useApi} from "@/hooks/useApi";
+import { useApi } from "@/hooks/useApi";
 import {
   ArrowLeft,
   ExternalLink,
@@ -12,9 +12,8 @@ import {
   Star,
   CheckCircle,
 } from "lucide-react";
-import { useState } from "react";
-import { set } from "date-fns";
 
+// Type definition for a Project
 type Project = {
   id: number;
   name: string;
@@ -34,75 +33,79 @@ type Project = {
   githubLink: string;
 };
 
-
-
 const ProjectDetail = () => {
+  // State to store projects data and current projec
   const [projectsData, setProjectsData] = useState<{ [key: string]: Project }>({});
-const [initialProject, setInitialProject] = useState<Project | null>(null);
-const [project, setProject] = useState<Project | null>(null);
-
+  const [project, setProject] = useState<Project | null>(null);
+  const [projectId, setProjectId] = useState<string | null>(null);
+  // Custom hook for API operations
   const {
-  createData: createProjectDetails,
-  updateData: updateProjectDetails,
-  deleteData: deleteProjectDetails,
-  fetchById: fetchProjectDetails,
-  loading: loadingProjectDetails,
-  data: projectDetails,
-} = useApi('projectDetails');
+    fetchById: fetchProjectDetails,
+    loading: loadingProjectDetails,
+    data: projectDetails,
+  } = useApi('projectDetails');
+
+  // Get project ID from URL params
   const { id } = useParams();
-  console.log("Project ID from params:", id);
-  const projectId = id as string;
-
-     useEffect(() => {
-  const fetchProjects = async () => {
-    try {
-      await fetchProjectDetails(projectId);
-    } catch (error) {
-      console.error("Error fetching projects:", error);
+   useEffect(() => {
+    if (id) {
+      setProjectId(String(id)); // ✅ safely convert to string
     }
-  };
-  fetchProjects();
-}, []);
+  }, [projectId , id]);
 
+  // Fetch project details when projectId changes
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        await fetchProjectDetails(projectId);
+      } catch (error) {
+        console.error("Error fetching projects:", error);
+      }
+    };
+    fetchProjects();
+  }, [projectId]);
 
-useEffect(() => {
-  if (projectDetails && Array.isArray((projectDetails as any)?.data)) {
-    const matchedProject = (projectDetails as any).data.find(
-      (project: any) => project.id === Number(projectId)
-    );
+  // Scroll to top when projectId changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [projectId]);
 
-    if (matchedProject) {
-      setProject(matchedProject);
-      setProjectsData((prev) => ({
-        ...prev,
-        [projectId]: matchedProject,
-      }));
-      console.log("Matched project:", matchedProject);
+  // Set project data when API response changes
+  useEffect(() => {
+    if (projectDetails && Array.isArray((projectDetails as any)?.data)) {
+      const matchedProject = (projectDetails as any).data.find(
+        (project: any) => project.id === Number(projectId)
+      );
+      if (matchedProject) {
+        setProject(matchedProject);
+        setProjectsData((prev) => ({
+          ...prev,
+          [projectId]: matchedProject,
+        }));
+      }
     }
-  }
-}, [projectDetails]);
+  }, [projectDetails , projectId]);
 
-  
-  const [editMode, setEditMode] = useState(false);
-
+  // Loading state
   if (project === null || loadingProjectDetails) {
-  return (
-    <div className="min-h-screen bg-hero-gradient font-inter text-white overflow-hidden relative">
-      <Navigation />
-      <div className="relative z-10 flex items-center justify-center min-h-[60vh]">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4 animate-pulse">Loading...</h1>
-          <p className="text-[#D2D0DD] mb-8">Please wait while we fetch the project.</p>
+    return (
+      <div className="min-h-screen bg-hero-gradient font-inter text-white overflow-hidden relative">
+        <Navigation />
+        <div className="relative z-10 flex items-center justify-center min-h-[60vh]">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold mb-4 animate-pulse">Loading...</h1>
+            <p className="text-[#D2D0DD] mb-8">Please wait while we fetch the project.</p>
+          </div>
         </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
-  );
-}
-  if (!loadingProjectDetails && project !== null){
+    );
+  }
+
+  // Main project details view
   return (
     <div className="min-h-screen bg-hero-gradient font-inter text-white overflow-hidden relative">
-      {/* Background blur elements */}
+      {/* Decorative background blur elements */}
       <div className="absolute top-64 right-0 w-[600px] h-[653px] rounded-full bg-gradient-to-b from-[rgba(84,84,212,0.20)] to-[rgba(84,84,212,0.08)] blur-[150px]" />
       <div className="absolute top-10 left-96 w-[467px] h-[1399px] rounded-full bg-gradient-to-b from-[rgba(251,168,28,0.11)] to-[rgba(224,86,136,0.06)] blur-[150px] rotate-[65.712deg]" />
       <div className="absolute -top-16 -left-80 w-[467px] h-[1234px] rounded-full bg-gradient-to-b from-[rgba(84,84,212,0.27)] to-[rgba(84,84,212,0.11)] blur-[150px] rotate-[-54.374deg]" />
@@ -112,6 +115,7 @@ useEffect(() => {
       {/* Hero Section */}
       <section className="relative z-10 py-20 px-4">
         <div className="max-w-6xl mx-auto">
+          {/* Back to Portfolio Link */}
           <Link
             to="/portfolio"
             className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-8 transition-colors duration-300 font-nunito"
@@ -121,7 +125,9 @@ useEffect(() => {
           </Link>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Project Info (Left) */}
             <div>
+              {/* Category and Rating */}
               <div className="flex items-center gap-3 mb-4">
                 <span className="px-4 py-2 bg-brand-teal/20 border border-brand-teal/30 rounded-full text-brand-teal text-sm font-semibold">
                   {project.category}
@@ -140,14 +146,17 @@ useEffect(() => {
                 </div>
               </div>
 
+              {/* Project Name */}
               <h1 className="text-4xl lg:text-6xl font-bold mb-6 bg-hero-text-gradient bg-clip-text text-transparent leading-tight">
                 {project.name}
               </h1>
 
+              {/* Subtitle */}
               <p className="text-xl text-[#D2D0DD] mb-8 font-inter leading-relaxed">
                 {project.subtitle}
               </p>
 
+              {/* Tags */}
               <div className="flex flex-wrap gap-3 mb-8">
                 {project.tags.map((tag, index) => (
                   <span
@@ -159,6 +168,7 @@ useEffect(() => {
                 ))}
               </div>
 
+              {/* Links */}
               <div className="flex flex-col sm:flex-row gap-4">
                 {project.liveLink && (
                   <a
@@ -185,6 +195,7 @@ useEffect(() => {
               </div>
             </div>
 
+            {/* Hero Image (Right) */}
             <div>
               <div className="relative">
                 <img
@@ -199,11 +210,11 @@ useEffect(() => {
         </div>
       </section>
 
-      {/* Project Details */}
+      {/* Project Details Section */}
       <section className="relative z-10 py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            {/* Project Info */}
+            {/* Project Info Card */}
             <div className="bg-glass-white backdrop-blur-sm border border-glass-border rounded-[20px] p-6">
               <h3 className="text-lg font-bold text-white mb-4 font-inter">
                 Project Info
@@ -232,7 +243,7 @@ useEffect(() => {
               </div>
             </div>
 
-            {/* Role */}
+            {/* Role Card */}
             <div className="bg-glass-white backdrop-blur-sm border border-glass-border rounded-[20px] p-6">
               <h3 className="text-lg font-bold text-white mb-4 font-inter">
                 My Role
@@ -242,7 +253,7 @@ useEffect(() => {
               </p>
             </div>
 
-            {/* Tech Stack */}
+            {/* Tech Stack Card */}
             <div className="bg-glass-white backdrop-blur-sm border border-glass-border rounded-[20px] p-6">
               <h3 className="text-lg font-bold text-white mb-4 font-inter">
                 Tech Stack
@@ -260,7 +271,7 @@ useEffect(() => {
             </div>
           </div>
 
-          {/* Description */}
+          {/* Project Overview */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6 font-inter">
@@ -299,16 +310,16 @@ useEffect(() => {
             </div>
           </div>
 
-          {/* Related Projects */}
+          {/* Other Projects */}
           <div>
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12 font-inter text-center">
               Other Projects
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {(Array.isArray((projectDetails as any)?.data) ? (projectDetails as any).data : [])
-          .filter((p: Project) => p.id !== project.id)
-          .slice(0, 3)
-          .map((relatedProject) => (
+                .filter((p: Project) => p.id !== project.id)
+                .slice(0, 3)
+                .map((relatedProject) => (
                   <Link
                     key={relatedProject.id}
                     to={`/portfolio/${relatedProject.id}`}
@@ -332,6 +343,10 @@ useEffect(() => {
                     </div>
                   </Link>
                 ))}
+
+
+   
+
             </div>
           </div>
         </div>
@@ -339,6 +354,7 @@ useEffect(() => {
 
       <Footer />
     </div>
-  );}
+  );
 };
+
 export default ProjectDetail;
